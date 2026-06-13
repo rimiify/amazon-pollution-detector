@@ -79,7 +79,7 @@ def generate_data():
     ).round(3)
     df['is_pollution_product'] = (
         (df['avg_rating'] >= 4.0) &
-        (df['avg_sentiment'] < 0.3)
+        (df['avg_sentiment'] < 0.3.5)
     ).astype(int)
     df = df.sort_values('pollution_score', ascending=False).reset_index(drop=True)
     return df
